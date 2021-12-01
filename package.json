@@ -1,0 +1,25 @@
+{
+  "name": "argengold",
+  "version": "1.0.0",
+  "description": "pagina de venta de oro en juego runescape",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eslan21/GameGoldSeller.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eslan21/GameGoldSeller/issues"
+  },
+  "homepage": "https://github.com/eslan21/GameGoldSeller#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  }
+}

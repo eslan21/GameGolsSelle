@@ -1,0 +1,837 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ffffffe0;
+    overflow-x: hidden;
+    background: #2193b0;  
+    
+}
+.imagenFondo{
+    position: fixed;
+    z-index: -50;
+    width: 100vw;
+    height: 90vh;
+    top: 10vh;
+    opacity: 0.7;
+}
+.imagenFondoMovil{
+    
+   display: none;
+
+}
+/* ------------------------Emcabezado-----------*/
+header{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background:#0094ED;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5vh;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -2px 12px 15px -5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -2px 12px 15px -5px rgba(0,0,0,0);
+    position: fixed;
+    z-index: 10000;
+    
+
+}
+header nav {
+    flex: 70%;
+    height: 100%;
+    
+    font-size: 2vh;
+}
+header div{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+  
+ 
+    height: 100%;
+}
+
+header div img{
+    width: 80%;
+}
+header nav ul{
+    width: 100%;
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    
+    
+}
+header nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease all;
+    border-left: 2px ridge rgb(251, 255, 0);
+    
+
+
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    font-family: 'Libre Baskerville', serif, Arial, Helvetica, sans-serif;
+
+}
+header nav ul li a:visited{
+    color: rgb(255, 255, 255);
+
+}
+header nav ul li:hover{
+    background: rgba(0, 0, 0, 0.445);
+}
+header nav ul li:hover a{
+    color: white;
+}
+.fa-bars{
+    display: none;
+}
+/* -----------------------Seleccion del tipo de jeugo --------*/
+.gameSelect{
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.582);
+    margin-bottom: 5vh;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.gameSelect button{
+    width: 50%;
+    background: transparent;
+    border: none;
+    transition: .3s ease all;
+}
+.gameSelect button:hover{
+   background: #9EF0F0;
+}
+.gameSelect button img{
+    height: 100%;
+}
+
+
+/* -----------------------Contenedor principal --------*/
+.sombre{
+    box-shadow:
+  0px 3.5px 19.4px rgba(0, 0, 0, 0.097),
+  0px 6.7px 31.6px rgba(0, 0, 0, 0.131),
+  0px 11.3px 48.2px rgba(0, 0, 0, 0.162),
+  0px 24px 92px rgba(0, 0, 0, 0.24);
+}
+.firstContainer{
+    margin-top: 15vh;
+    width: 100vw;
+    height: 85vh;
+    
+   
+}
+.container{
+    display: flex;
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
+    justify-content: space-between;
+    
+    
+    
+}
+
+/* -----------------------Banderas--------*/
+
+.banderas{
+    width: 20%;
+    height: 100%;
+   
+    background: #01568b83;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banderas img{
+    width: 50%;
+    border-radius: 10px; 
+    height: 15%; 
+    border: 1px outset rgb(255, 255, 255)
+}
+#banderasSelect, .banderasSelect{
+    width: 100%;
+    height: 10vh;
+    border: none;
+    outline: none;
+    display: none;
+    border-radius: 5px;
+    font-weight: 900;
+    background-color: #0094ED;
+    color: #FFFFFF;
+}
+
+/*-------------------------------------------------*/
+.calculadora{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.custonMargin{
+    margin: 5% 5%;
+
+}
+.precioActual{
+    display: flex;
+    justify-content: space-around;
+    
+    height: 35%;
+    width: 100%;
+    flex-direction: column;
+}
+.precioActual h3{
+    border-left: 3px solid yellow;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 8px #000000;
+
+}
+.precioActual p{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: end;
+    
+    
+}
+
+#recibirPaisSelect, #precioPaisSelect, #recibirDolares, #precioDolares{
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: 6vh;
+   
+    
+}
+/*--------------input----------------*/
+.inputCal{
+    width: 100%;
+    height: 65%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+}
+.inputCal form{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+}
+.inputMonto{
+    width: 100%;
+    height: 50%;
+    background: none;
+    border: none;
+    border-bottom: 3px solid white;
+    outline: none;
+    font-size: 30px;
+    border-radius: 5px;
+    transition: .3s ease all;
+    font-family: 'Libre Baskerville', serif;
+    background: #0000006c;
+
+}
+.lb_monto{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    overflow: hidden;
+    color: white;
+    font-size: 2vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+.lb_monto:after{
+    content: "";
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    border-bottom:5px solid #000000;
+    transition: .3s ease all;
+}
+.inputMonto:focus + .lb_monto::after{
+    left: 0;
+}
+
+.inputMonto:focus{
+    background: #ffffffe0;
+}
+.lb_monto span{
+    position: absolute;
+    transition: .3s ease all;
+}
+.inputMonto:focus + .lb_monto span{
+    transform: translateY(300%);
+}
+.metodoVenta{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    
+    
+}
+.metodoVenta button{
+    height: 100%;
+    width: 25%;
+    background-color: rgb(0 51 167 / 77%);
+    transition: .3s ease all;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.5vh;
+    overflow: hidden;
+
+}
+.metodoVenta button:hover{
+    background-color: #ffffffe0;
+    color: black;
+}
+
+
+/****************** Boton Enviar*********************/
+.botonEnviar{
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    position: relative;
+}
+
+.btnSend{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.534);
+    border: none;
+    color: white;
+    position: relative;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 900;
+    -webkit-box-shadow: 1px 8px 9px 3px rgba(0,0,0,0.42); 
+    box-shadow: 1px 8px 9px 3px rgba(0,0,0,0.42);
+}
+.btnSend span::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:-100%;
+    background: #ffffffe0;
+    transition: .3s ease all;
+    z-index: -1;
+
+}
+
+.btnSend:hover span:after{
+    left:0;
+    
+}
+.btnSend:hover{
+    color: black;
+}
+.mostrarAviso::before{
+    content: "Rellena todos los campos";
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background: black;
+    color: white;
+    font-weight: 900;
+    visibility: hidden;
+}
+.mostrarAviso:hover:before{
+    visibility: visible;
+
+}
+
+/*---------------------------Metodo de pago-------------------------*/
+
+.metodoPago{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: all 0.3s;
+    
+}
+
+
+.pagoSelected{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    transition: all 0.3s linear ;
+    background: transparent;
+    border: none;
+   overflow: hidden;
+   position: relative;
+   background: #01568b83;
+
+}
+.pagoSelected:hover{
+ background:rgba(255, 255, 255, 0);
+}
+
+.pagoSelected img{
+    height: 100%;
+    border-radius: 50%;
+}
+.pagoSelected span{
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 900;
+    font-size: 2vh;
+    color: #ffffff;
+}
+.pagoSelected:hover span{
+    color: #000000;
+}
+.pagoSelected span::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: white;
+    transition: all 0.3s linear ;
+    z-index: -1;
+
+}
+.pagoSelected:hover span::after{
+    left: 0;
+}
+
+.pagoSelected:hover{
+    border-right: 4px solid #fffb00;
+    border-left: 4px solid #fffb00; 
+}
+/*------------------------------Comentarios-----------------*/
+
+.Comentarios{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-margin: 10vh;
+}
+.Comentarios img{
+    max-width: 30%;
+    max-height: 50%;
+    margin-top: 30px;
+   
+}
+
+.barraSeparadora{
+    width: 100vw;
+    min-height: 10vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#0094EDe5;
+    box-shadow:
+    0px 17.7px 2.4px -4px rgba(0, 0, 0, 0.057),
+    0px 24.1px 8.5px -4px rgba(0, 0, 0, 0.083),
+    0px 38px 20px -4px rgba(0, 0, 0, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+}
+
+
+.barraSeparadora p{
+     font-size: 2em;
+     text-align: center;
+     color: rgb(255, 255, 255);
+     transition: 0.3s ease all;
+     font-family: 'Libre Baskerville', serif, Arial, Helvetica, sans-serif;
+     font-weight: bold;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+
+ 
+     
+}
+.botonComentarios{
+    text-align: center;
+    width: 50vw;
+}
+.botonComentarios p,.botonComentarios div {
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.botonComentarios div i{
+    font-size: 30px;
+  }
+.botonComentarios a button{
+    width: 20vw;
+    height: 10vh;
+    background: #ffffffe0;
+    border: 2px solid black;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    transition: 0.3s ease all;
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+.botonComentarios a button:hover{
+    background: rgba(0, 0, 0, 0.596);
+    color: rgb(255, 255, 255);
+}
+
+
+
+/*------------------------------Siguinos--------------------------*/
+ .siguenos{
+   width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-margin: 10vh;
+
+    
+}
+.siguenos  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .7;
+}
+.siguenos div{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+ 
+   
+}
+
+.siguenos div a{
+    
+    height:  35vh;
+    
+    margin: 0 15px;
+}
+
+.animacion{
+    opacity: 0;
+}
+.fa-facebook-f ,.fa-discord ,.fa-whatsapp, .fa-telegram, .fa-instagram{
+    color: white;
+    transition: .3s linear all;
+}
+.fa-facebook-f:hover ,.fa-discord:hover ,.fa-whatsapp:hover, .fa-telegram:hover, .fa-instagram:hover{
+    color: turquoise;
+}
+
+/****************************** PASOS A SEGUIR PARA VENDER*********************************/
+.pasosVenta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 900;
+    
+    margin-bottom: 0.5em;
+}
+.pasosVenta p{
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: 2vh;
+}
+.pasosVenta p:first-child{
+    padding: .3em;
+    text-align: center;
+    margin-right: 0.5em;
+    padding: auto;
+}
+.pasosVenta p:last-child{
+    border-bottom: 2px solid yellow;
+}
+/****************************** Simbolo de monedas*********************************/
+.simbolo{
+    color: rgb(255, 251, 0);
+    font-size: 6vh;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    z-index: -2;
+  }
+  .imagenDePrueba{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    z-index: -10;
+     
+  }
+/*********************************************Imagenes de fondo**************************/
+  .ondasContainer1{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+  }
+
+
+ 
+
+ 
+@media screen and (max-width: 600px){
+    svg{
+        display: none;
+    }
+    .imagenFondoMovil{
+        position: fixed;
+       height: 100vh;
+       top: 0;
+       z-index: -10;
+       display: block;
+       width: 100vw;
+       opacity: 0.7;
+
+    }
+   .imagenFondo{
+       display: none;
+       
+   }
+    .container{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        
+    }
+    .banderas{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.582);
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .metodoPago{
+        width: 100%;
+        height: 100vh;   
+        margin-bottom: 10px;
+        display: none;
+
+    }
+    .calculadora{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    header nav {
+        position: fixed;
+        right: -50vw;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+        transition: all 0.1s linear;
+        z-index: 500;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background: #0094ED;
+        position: relative;
+        box-shadow:
+  0px 0px 2.5px rgba(0, 0, 0, 0.057),
+  0px 0px 6.1px rgba(0, 0, 0, 0.073),
+  0px 0px 11.4px rgba(0, 0, 0, 0.078),
+  0px 0px 20.3px rgba(0, 0, 0, 0.078),
+  0px 0px 38px rgba(0, 0, 0, 0.075),
+  0px 0px 91px rgba(0, 0, 0, 0.07)
+;
+
+    }
+    header nav ul li{
+        font-size: 1em;
+    }
+  
+    header img{
+        width: 80%;
+        text-align: center;
+    }
+    .fa-bars{
+        width: 20%;
+        font-size: 30px;
+        text-align: end;
+        margin-right: 1em;
+        display: block;
+    }
+    .gameSelect button img{
+        width: 100%;
+        height: 100%;
+    }
+    .imagenFondo{
+       height: 150vh;
+    }
+
+    .firstContainer{
+    
+        width: auto;
+        height: auto;
+       
+    }
+    .btnSend{
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.808);
+    }
+
+/*-------comentarios ---*/
+    .Comentarios img{
+    
+    display: none;
+    }
+   
+    .botonComentarios a button{
+        width: 50vw;
+        height: 10vh;
+        background: #ffffffe0;
+        border: 2px solid;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 900;
+        font-size: 1.2em;
+        transition: 0.3s ease all;
+    }
+    .botonComentarios{
+        text-align: center;
+        width: 70vw;
+    }
+    
+/*-------Siguenos ---*/
+
+  
+    .siguenos div {
+        margin-top: 30vh;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      
+       
+    }
+
+    .siguenos div a{
+        
+        margin-bottom: .3em ;
+    }
+
+ 
+    /*--------------banderas movil---------------------*/
+    #banderasSelect{
+        display: block;
+        margin: 10px auto;
+        
+        width: 90vw;
+    }
+    /*--------------Meto de pago movil---------------------*/
+
+    .banderasSelect{
+        display: block;
+        margin: 10px auto;
+        width: 90vw;
+    }
+    .pasosVenta p{
+    font-size: 4vw;
+
+    }
+ 
+}
+
+@media screen and (max-width: 1000px) {
+    .pagoSelected span{
+        font-size: 1.4vh;
+    }
+    .metodoVenta button{
+        font-size: 1.2vh;
+
+    }
+}
+
+
+
+

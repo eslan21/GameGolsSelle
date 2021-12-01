@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/all.css">
+    <link rel="stylesheet" href="/src/css/index.css">
+
+    <link rel="icon" type="image/png" sizes="96x96" href="/src/img/favicon/AGfavi.png">
+
+    <title>ArgenGold</title>
+</head>
+<body id="body">
+    <header>
+       <div> 
+           <img src="/src/img/ArgenGold LOGO.png" alt="argentinalogo">
+       </div>
+        <nav>
+            <ul id="ulNav">
+                <li><a href="#body">Calculadora</a></li>
+                <li><a href="#comentarios">Recomendaciones</a></li>
+                <li><a href="#siguenos">Siguenos</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars"></i>
+    </header>
+        <!-----------------------------IMAGENES DE FONDO------------------>
+        <svg class="imagenDePrueba" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#9EF0F0" d="M27.5,-47.9C37.2,-42.1,47.8,-37.9,55.6,-30.1C63.5,-22.4,68.6,-11.2,69.6,0.5C70.5,12.3,67.1,24.5,62.3,37.5C57.4,50.4,51.1,64,40.5,71.3C29.9,78.7,14.9,79.8,2.7,75.1C-9.5,70.4,-19,59.9,-29.9,52.7C-40.8,45.5,-53,41.6,-63.8,33.3C-74.6,25.1,-84.1,12.5,-85.8,-1C-87.5,-14.5,-81.4,-29,-73.1,-41.7C-64.9,-54.4,-54.5,-65.3,-41.9,-69.5C-29.4,-73.7,-14.7,-71.2,-2.9,-66.2C8.9,-61.2,17.8,-53.8,27.5,-47.9Z" transform="translate(100 100)" />
+          </svg>
+    <!--<img src="/img/fondo2.jpg" alt="rs" class="imagenFondo">--->
+
+    <img src="/src/img/RunescapeMobile-.jpg" alt="rs" class="imagenFondoMovil">
+
+        <!-----------------------------Seleccion de tipo de juego------------------->
+    <div class="firstContainer" id="firstContainer">
+        <section class="pasosVenta">
+            <p>1.</p>
+            <p>Selecciona el Juego</p>
+        </section>
+        <div class="gameSelect sombre">
+            <button class="rsold">
+                <img src="/src/img/Old_School_RuneS.png" alt="">
+            </button>
+            <button class="rs3">
+                <img src="/src/img/RuneScape3Logo.png" alt="">
+            </button>
+        </div>
+
+        <div class="container" id="inicio">
+
+            <!-----------------------------Bandenras------------------->
+            <div class="banderas sombre" id="banderas">
+                <section class="pasosVenta">
+                    <p>2.</p>
+                    <p>Selecciona tu Pais</p>
+                </section>
+                <img src="/src/img/venezuela.png" class="shadow-drop-2-lr" alt="venezuela" data-flag="Bs">
+                <img src="/src/img/colombia.png" class="shadow-drop-2-lr" alt="colombia" data-flag="COL">
+                <img src="/src/img/argentina.png" class="shadow-drop-2-lr" alt="argentina" data-flag="ARS">
+                <img src="/src/img/peru.png" class="shadow-drop-2-lr" alt="Peru" data-flag="SOL">
+                <img src="/src/img/brazil.png" class="shadow-drop-2-lr" alt="Brazil" data-flag="BRL">
+            </div>
+            <form >
+                <select name="banderasMovil" id="banderasSelect">
+                    <option value="">
+                        --2. Selecciona tu Pais--
+                     </option>
+                    <option value="Bs">
+                        Venezuela
+                    </option>
+                    <option value="COL">
+                        colombia
+                    </option>
+                    <option value="ARS">
+                        argentina
+                    </option>
+                    <option value="SOL">
+                        Peru
+                    </option>
+                    <option value="BRL">
+                        Brazil
+                    </option>
+                </select>
+            </form>
+            <!-----------------------------Metodo de PAgo------------------->
+
+            <div class="metodoPago " id="metodoPago">
+                <section class="pasosVenta">
+                    <p>3.</p>
+                    <p>Selecciona Metodo de Pago</p>
+                </section>
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/argentinalogo.png"  data-pay="Transferencias Bancarias Argentina" alt="">
+                 <span>Transferencias Bancarias Argentina</span>
+                </button>  
+                <button  class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/banesco.png" data-pay="Banesco" alt="">
+                    <span>Banesco</span>
+                </button>
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/provincial.webp"  data-pay="Provincial" alt="">
+                <span>Provincial</span>
+                </button>
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/bdv.jpg"  data-pay="Banco de Venezuela" alt="">
+                    <span>Banco de Venezuela</span>
+                </button>
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/mercantil.jpg"  data-pay="Mercantil" alt="">
+                 <span>Mercantil</span>
+                </button>
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/bod.png"  data-pay="BOD" alt="">
+                <span>BOD</span>
+                </button>
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/pagomovil.png"  data-pay="Pagomovil" alt="">
+                <span>Pagomovil</span>
+                </button>    
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/nequi-logo.png"  data-pay="nequi" alt="">
+                <span>Nequi</span>
+                </button>       
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/bancolombia.png"  data-pay="Bancolobia" alt="">
+                <span>Bancolobia</span>
+                </button>  
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/Pix_logo.svg"  data-pay="Pix" alt="">
+                <span>Pix</span>
+                </button>  
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/usdt.png"  data-pay="USDT" alt="">
+                <span>USDT</span>
+                </button>            
+                <button class="pagoSelected ">
+                    <img src="/src/img/metodoDePago/bitcoin.jpg"  data-pay="Bitcoin" alt="">
+                <span>Bitcoin</span>
+                </button>                                  
+            </div>
+            <form >
+                
+                <select name="MetodoPagoMovil" id="MetodoPagoMovil" class="banderasSelect" >
+                    <option value="">
+                        --3.Selecciona el Metodo de pago--
+                     </option>
+                    <option value="Banesco">
+                       Banesco
+                    </option>
+                    <option value="Venezuela">
+                        Banco de Venezuela
+                    </option>
+                    <option value="Provincial">
+                        Provincial
+                    </option>
+                    <option value="Pagomovil">
+                        Pagomovil
+                    </option>
+                    <option value="Bitcoin">
+                        Bitcoin
+                    </option>
+                    <option value="Mercantil">
+                        Mercantil
+                    </option>
+                    <option value="Transferencias Bancarias Argentina">
+                        Transferencias Bancarias Argentina
+                    </option>
+                    <option value="nequi">
+                        Nequi
+                    </option>
+                    <option value="Bancolobia">
+                        Bancolobia
+                    </option>
+                    <option value="Binance">
+                        Binance
+                    </option>
+                    <option value="Pixa">
+                        Pixa
+                    </option>
+                    <option value="USDT">
+                        USDT
+                    </option>
+                </select>
+            </form>
+            <!-----------------------------Calculadora------------------->
+
+            <div class="calculadora">
+                <div class="precioActual ">
+                
+                    <h3>Precio del Dia:</h3>
+                        <p> 
+                            <span class="simbolo" id="simboloDolares1">$</span>
+                            <span id="precioDolares"></span>
+                        </p>
+                        <p> 
+                            <span class="simbolo" id="simboloSelect1"></span>
+                            <span id="precioPaisSelect"></span>
+                        </p>
+                </div>
+                <div class="inputCal">
+                    <form>
+                        <input type="number" id="monto" class="inputMonto ">
+                        <label class="lb_monto" for="monto">
+                            <span>
+                                 4. Coloca el monto en M's y forma de Venta aqui
+                            </span>
+                        </label>
+                        <div class="metodoVenta">
+                            <button tipo-venta="TIP JAR">TIP JAR</button>
+                            <button tipo-venta="STAKE">STAKE -2% | 100M min</button>
+                            <button tipo-venta="TRADE">TRADE</button>
+                            <button tipo-venta="BOND">BOND</button>
+                        </div>
+                    </form>
+                    <div class="precioActual ">
+                        <h3>Recibiras:</h3> 
+                            <p>
+                                <span class="simbolo" id="simboloDolares2">$</span>
+                                <span id="recibirDolares">0.00</span>
+                            </p>
+
+                            <p>
+                                <span class="simbolo" id="simboloSelect2"></span>
+                                <span id="recibirPaisSelect">0.00</span>
+                            </p>
+                    </div>
+                    <div class="botonEnviar mostrarAviso ">
+
+                        <button class="btnSend disabled" id="btnSell"><span>Vender</span></button>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+
+            <!-----------------------------Comentarios------------------->
+
+    <div class="Comentarios" id="comentarios">
+        
+    
+        <div class="barraSeparadora" id="barraUno">
+            <p class="animacion">SEGURIDAD Y CONFIANZA GARANTIZADA</p>
+        </div>
+        <img src="src/img/bondgrande.png"  class="rotate-center" alt="" >
+        <div class="botonComentarios animacion">
+            <p >Revisa los comentarios de nuestro clientes</p>
+            <div >
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <a href="https://www.facebook.com/ArgenGoldRS/reviews/?ref=page_internal" target="_blank"><button  id="botonSiguenos" >Visitanos  <i class="fa-solid fa-thumbs-up"></i></button></a>
+            
+        </div>
+    </div>
+
+            <!-----------------------------Siguenos------------------->
+
+    <div class="siguenos" id="siguenos">
+        <section class="barraSeparadora ">
+            <p class="animacion">NUESTRAS REDES</p>
+        </section>
+        <section class="ondasContainer1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#9EF0F0" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,176C480,160,600,128,720,138.7C840,149,960,203,1080,218.7C1200,235,1320,213,1380,202.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        </section>
+        <div>
+               <a target="_blank" href="https://www.facebook.com/ArgenGoldRS" class="card sombre"><i class="fa-brands fa-facebook-f"></i></a> 
+               <a target="_blank" href="https://discord.gg/2BQ92gGA3Z" class="card sombre"><i class="fa-brands fa-discord"></i></a> 
+               <a target="_blank" href="https://wa.me/5491169546495" class="card sombre"><i class="fa-brands fa-whatsapp"></i></a> 
+               <a target="_blank" href="https://t.me/joinchat/1zUsEXLzUSQxY2Ux" class="card sombre"><i class="fa-brands fa-telegram"></i></a> 
+               <a target="_blank" href="https://www.instagram.com/argengoldrs/" class="card sombre"><i class="fa-brands fa-instagram"></i></a> 
+
+        </div>
+        
+           
+        
+    </div>
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=6b9213d1-1dd8-4af2-9624-b6ab1bda2e79"></script>
+    <script src="lib/app.js"></script>
+
+</body>
+</html>
